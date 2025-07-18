@@ -256,8 +256,48 @@ ul {
     .hamburger-menu.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
     .hamburger-menu.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
+    .form-container {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1.5rem;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea,
+    .form-container .btn {
+        width: 100%;
+    }
+
     .tour-item, .tour-item:nth-child(even) { flex-direction: column; }
     .tour-includes ul { grid-template-columns: 1fr; }
-    .contact-grid { grid-template-columns: 1fr; }
+    
+    .contact-grid { 
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .contact-info {
+        width: 100%; /* Agregado */
+        padding: 1.5rem;
+        /* text-align: center; -- Eliminado ya que `justify-content` es más efectivo aquí */
+    }
+    .contact-info p {
+        display: flex; /* Asegura que siga siendo flex */
+        flex-direction: row; /* Mantenerlos en fila */
+        align-items: flex-start; /* Alineación vertical de ítems */
+        justify-content: center; /* Agregado: Centra el contenido horizontalmente */
+        text-align: left; /* Agregado: Restablece la alineación del texto */
+        margin-bottom: 0.8rem; /* Ajuste el espacio */
+    }
+    .contact-info i {
+        margin-right: 0.5rem;
+        width: auto; /* Agregado */
+    }
+    .map-container {
+        width: 95%; /* Agregado */
+        margin-left: auto; /* Agregado */
+        margin-right: auto; /* Agregado */
+    }
+
     .footer-grid { text-align: center; }
 }
